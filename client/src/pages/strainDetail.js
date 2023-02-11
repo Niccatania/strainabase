@@ -1,19 +1,17 @@
-// Dynamically render data from the databse into this function
-export default function strainDetail(){
-    const straindetail ={
-        strainName: "Watermelon Gelato",
-        strainType: "Indica dominant hybrid",
-        img: "https://images.leafly.com/flower-images/defaults/purple/strain-18.png?auto=compress,format&w=295&dpr=1",
-        description: "This Indica dominat hybrid flower shows beautiful purple colors. The taste is extraordinary and will leave you in a wonderful mood"
-    };
 
-    return (
-        <div id="strain">
-        
+// Dynamically render data from the databse into this function
+// export const StrainDetail = (data) => {
+
+
+//     return (
+//         <div id="strain">
+//           {data.StrainName}
+//              </div>
+/*         
       <div>
         <div>
-            <h1>{straindetail.strainName}</h1>
-            <h2>{straindetail.strainType}</h2>
+            <h1>{location.state.data.strainName}</h1>
+            <h2>{location.state.data.type}</h2>
         </div>
         <img
           key={straindetail.img}
@@ -21,12 +19,12 @@ export default function strainDetail(){
         />
       </div>
       <div>
-            <p>{straindetail.description}</p>
+            <p>{location.state.data.description}</p>
         </div>
         <div>
             <button><a href={"/"}>Back to Home </a></button>
         </div>
 
-        </div>
-    )
-}
+        </div> */
+//     )
+// }
