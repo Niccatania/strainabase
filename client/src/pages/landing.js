@@ -17,7 +17,7 @@ import {
 export default function Landing() {
   // setting our default state and Updated state paramaters
   const [searchInput, setSearchInput] = useState("");
-  const [data, setData] = useState("")
+  const [data, setData] = useState([])
   
 
   function handleSearch(event) {
@@ -28,9 +28,9 @@ export default function Landing() {
     event.preventDefault();
     console.log(searchInput);
     fetch(`/data?q=${searchInput}`)
-    .then((response) => response.json())
-    .then((data) => setData(data))  
-    .then((error) => console.log(error));
+      .then(response => response.json())
+      .then(data => setData(data))
+      .then(error => console.log(error));
   }
 
   return (
@@ -56,7 +56,7 @@ export default function Landing() {
             </Button>
           </form>
         </div>
-        {/* <Box width="100%">
+        <Box width="100%">
           <Card
             className="wrappa"
             direction={{ base: "column", sm: "" }}
@@ -102,7 +102,7 @@ export default function Landing() {
             
           </Card>
         </Box>
-       */}
+      
       </div>
       <div id="detail"></div>
     </>
