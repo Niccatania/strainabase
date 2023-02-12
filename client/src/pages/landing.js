@@ -19,11 +19,12 @@ export default function Landing() {
   const [searchInput, setSearchInput] = useState("");
   const [data, setData] = useState([])
   
-
+// This function is an event handler that grabs the target value and updates the state with that value
   function handleSearch(event) {
     const userInput = event.target.value;
     setSearchInput(userInput);
   }
+// This fetch will take the users input and communicates with our server. The server commmunicates with the database and returns relevant data
   function search(event) {
     event.preventDefault();
     console.log(searchInput);
@@ -40,6 +41,8 @@ export default function Landing() {
           Strainabase
         </h1>
         <div>
+          {/* on form submit we will call the 'search' function referenced above
+          The handleSearch function is called on change which means that every value change will call the function and update state  */}
           <form id="search-form" role="search" onSubmit={search}>
             <Input
               w={{ sm: "75%", md: "50%", lg: "50%" }}
@@ -63,6 +66,7 @@ export default function Landing() {
             overflow="hidden"
             variant="outline"
           >
+            {/* This creates cards using the data captured from our fetch above. The cards are dynamically rendered with info from our searched term */}
             <nav>
               {data.map((item) => (
                 <div className="eachCard">
@@ -71,7 +75,7 @@ export default function Landing() {
                     objectFit="cover"
                     maxW={{ base: "100%", sm: "200px" }}
                     src={item.imageLink}
-                    alt="Caffe Latte"
+                    alt="Strain Detail"
                   />
 
                   <Stack boxShadow="xl" p="6" rounded="md" bg="white">
