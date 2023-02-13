@@ -10,6 +10,7 @@ import Landing from './pages/landing';
 import ErrorPage from './pages/error';
 import StrainDetail from './pages/strainDetail';
 import { ChakraProvider } from '@chakra-ui/react';
+import AgeVerification from './pages/ageVerification';
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Fredoka+One&family=Inter&display=swap');
 </style>
@@ -17,7 +18,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 const router = createBrowserRouter([
     {
         path: "/",
-        element:<Landing/>,
+        element:<AgeVerification/>,
        
     },
     {
